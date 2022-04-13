@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+/* ======================================================
+  全体
+========================================================*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color      : #383e45;
+  font-size  : 1.4rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.6rem;
+}
+
+ol, ul, dl {
+  list-style-position: inside;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+ul li {
+  list-style: none;
+}
+
+li::marker {
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  width : 100%;
+  height: 100%;
+}
+/* 共通＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.wrapper {
+  width: 80%;
+  margin-left: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.sp {
+  display: none;
+}
+
+.top-p {
+  text-align: center;
+}
+
+/* ページトップボタン */
+main {
+  position: relative;
+}
+#page-top {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 1px solid #fff;
+  position: relative;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+#page-top::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  transform: rotate(-180deg);
+  position: absolute;
+  top: 7px;
+  right: 14px;
+}
+
+/* header============================================== */
+header {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  padding: 2%;
+}
+
+#sitetitle {
+  width: 120px;
+  height: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#sitetitle a {
+  display:block;
+  line-height: 20px;
+}
+
+#sitetitle img {
+  object-fit: cover;
+}
+
+/* グローバルメニュー */
+#global-nav {
+  margin-bottom: 80px;
+}
+
+#global-nav li,
+#sns li {
+  line-height: 2.4rem;
+}
+
+/* main=============================================== */
+section {
+  padding-top: 160px;
+}
+
+.sec-container {
+  padding: 0 10%;
+  margin: 0 auto;
+}
+
+ /* キー動画 */
+ #keyvideo {
+  max-width: 100vw;
+  height: 600px;
+}
+
+.bg-video {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  z-index: -20;
+}
+
+ /* 各セクション内の共通部 */
+ .sec-container {
+  padding: 2%;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+  position:relative;
+}
+
+.title::before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 25px;
+  left: 50px;
+}
+
+.title::after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+
+#project .title::before,
+#project .title::after,
+#feature .title::before,
+#feature .title::after
+ {
+  background-color: #fff;
+}
+
+/* project */
+#project {
+  background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8));
+  color: #fff;
+}
+.project-content.flex {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-content li {
+  width: 48%;
+  position: relative;
+  border: 1px solid #fff;
+  margin-bottom: 30px;
+}
+
+.project-content li::after {
+  content: "";
+  box-shadow: 0 0 15px #2e2e2e inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* feature */
+#feature {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 160px 0;
+  margin-top: 0;
+}
+
+.feature-content.flex {
+  justify-content: space-between;
+}
+
+.ft-item {
+  width: 30%;
+  text-align: center;
+}
+
+.ft-circle a{
+  display: block;
+  width: 100%;
+  padding: calc(50% - 1.4rem - 1px) 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.ft-title {
+  font-weight: bold;
+  padding: 2%;
+}
+
+/* flow */
+#flow,
+#contact {
+  background-color: #fff;
+}
+
+.top-p {
+  margin-bottom: 60px;
+}
+
+.flow-content .flex {
+  justify-content: space-between;
+}
+
+.flow-left {
+  width: 25%;
+}
+
+.flow-chart {
+  position: relative;
+}
+
+.flow-chart::before {
+  content:"";
+  width: 50px;
+  height: 600px;
+  background-color:#FFDD00;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin: 0 auto;
+}
+
+.flow-chart li {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  line-height: 80px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.flow-chart li::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  border-top: 30px solid #000;
+  border-right: 118px solid transparent;
+  border-left: 118px solid transparent;
+  position: absolute;
+  top: 80px;
+  left:0;
+}
+
+.flow-desc {
+  width: 80%;
+  margin-left:85px;
+}
+
+.flow-desc-item {
+  height: 110px;
+  margin-bottom: 30px;
+}
+
+.flow-desc dt {
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.flow-desc span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: -50px;
+}
+/* contact */
+#contact {
+  padding-bottom: 160px;
+}
+
+.contact-item.flex {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ct-box {
+  width: 30%;
+  height:190px;
+  border: 1px solid #000;
+  position: relative;
+  text-align: center;
+}
+
+.ct-box:hover {
+  border: 5px solid #000;
+}
+.ct-box::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  border-top: 20px solid #000;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom:0;
+  right:-10px;
+}
+
+.ct-box a {
+  display: inline-block;
+  width: 100%;
+  line-height:50px;
+  padding: 10% 0;
+}
+
+.ct-box span {
+  display: block;
+
+}
+.ct-box .material-icons {
+  font-size: 10rem;
+}
+/* footer============================================= */
+footer {
+  padding-top: 160px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 3%;
+}
+
+#footer-nav {
+  margin-bottom: 60px;
+}
+
+#footer-nav .flex {
+  flex-wrap: wrap;
+}
+
+#footer-nav ul.flex{
+  justify-content: center;
+}
+
+#footer-nav li {
+  border-right: 1px solid;
+  padding: 0 2%;
+}
+
+#footer-nav li:last-child {
+  border-right: none;
+}
